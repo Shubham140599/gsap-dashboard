@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GSAP Dashboard</title>
+        <!----CSS Link-->
+        <link rel="stylesheet" href="index.css">
+        <!---Bootstrap Link-->
+
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+            crossorigin="anonymous">
+
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+            crossorigin="anonymous"></script>
+
+        <!----font Link-->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+        <nav class="nav">
+            <a href="" class="logo">
+                <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                <span>logo</span>
+            </a>
+
+            <ul class="menu">
+                <li class="active"><a href=""> <i class="fa fa-home"
+                            aria-hidden="true"></i><span>Dashboard</span></a></li>
+                <li><a href=""><i class="fa fa-users"
+                            aria-hidden="true"></i><span>Clients</span></a></li>
+
+                <li><a href=""><i class="fa fa-tint"
+                            aria-hidden="true"></i><span>Projects</span></a></li>
+
+                <li><a href=""><i class="fa fa-check" aria-hidden="true"></i><span>Orders</span></a>
+                </li>
+
+                <li><a href=""><i class="fa fa-money" aria-hidden="true"></i>Receties</a></li>
+
+                <li><a href=""><i class="fa fa-cog" aria-hidden="true"></i>Contact</a></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <header class="header">
+                <button type="button" class="button toggle-menu active">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+
+                    <span>Dashboard</span>
+                </button>
+                <form action="" class="form">
+                    <input type="text" placeholder="Busca">
+                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                </form>
+
+                <div class="box-profile">
+                    <img src="image/profile.jpg" alt="">
+
+                    <p class="name">
+                        Code BR
+                        <span>Super Admin</span>
+                    </p>
+                </div>
+            </header>
+
+            <section class="section">
+                <div class="container-fluid container-content cards">
+                    <div class="row">
+
+
+                        <div class="col-xl-3 col-lg-6 col-12">
+                            <div class="card shadow">
+                                <div class="desc">
+                                    <span>130</span>
+                                    <p>Clients</p>
+                                </div>
+                                <i class="fa fa-th" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-12">
+                            <div class="card shadow">
+                                <div class="desc">
+                                    <span>230</span>
+                                    <p>Projects</p>
+                                </div>
+                                <i class="fa fa-th" aria-hidden="true"></i>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-lg-6 col-12">
+                            <div class="card shadow">
+                                <div class="desc">
+                                    <span>330</span>
+                                    <p>Orders</p>
+                                </div>
+                                <i class="fa fa-th" aria-hidden="true"></i>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-lg-6 col-12">
+                            <div class="card shadow">
+                                <div class="desc">
+                                    <span>430</span>
+                                    <p>Contact</p>
+                                </div>
+                                <i class="fa fa-th" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid container-content charts">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12 col-12">
+                            <div class="card shadow">
+                                <canvas class="shadow" id="chartClientes" width="400"
+                                    height="200"></canvas>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-12">
+                            <div class="card shadow">
+                                <canvas class="shadow" id="chartReceitas" width="400"
+                                    height="200"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid container-content tables">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-12 col-12">
+                            <h3 class="title">Projects recentes</h3>
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Name of Projects</th>
+                                            <th scope="col">Deparment</th>
+                                            <th scope="col">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Titulo do Projects</td>
+                                            <td>Dev</td>
+                                            <td><span class="style"></span>Andamento</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Titulo do Project</td>
+                                            <td>Design </td>
+                                            <td><span class="style"></span>Andamento</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Titulo do Project</td>
+                                            <td>Design</td>
+                                            <td><span class="style2"></span>Finalizado</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Titulo do Project</td>
+                                            <td>Development</td>
+                                            <td><span class="style3"></span>Tests</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Titulo do Project</td>
+                                            <td>Development</td>
+                                            <td><span class="style2"></span>Finalizado</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Titulo do Project</td>
+                                            <td>Design</td>
+                                            <td><span class="style"></span>Andamento</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Titulo do Project</td>
+                                            <td>Design</td>
+                                            <td><span class="style3"></span>Tested</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 col-12">
+                            <h3 class="title">Novos clients</h3>
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <tbody>
+                                        <tr>
+                                            <td><img src="image/profile1.jpg" alt=""></td>
+                                            <td>Code BAR</td>
+                                            <td>
+                                                <a href=""><i class="fa fa-user"
+                                                        aria-hidden="true"></i></a>
+
+                                                <a href=""><i class="fa fa-envelope-o"
+                                                        aria-hidden="true"></i>
+                                                </a>
+                                                <a href=""><i class="fa fa-phone"
+                                                        aria-hidden="true"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="image/profile2.jpg" alt=""></td>
+                                            <td>Code BR</td>
+                                            <td>
+                                                <a href=""><i class="fa fa-user"
+                                                        aria-hidden="true"></i></a>
+
+                                                <a href=""><i class="fa fa-envelope-o"
+                                                        aria-hidden="true"></i>
+                                                </a>
+                                                <a href=""><i class="fa fa-phone"
+                                                        aria-hidden="true"></i></a>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><img src="image/profile3.jpg" alt=""></td>
+                                            <td>Code BR</td>
+                                            <td>
+                                                <a href=""><i class="fa fa-user"
+                                                        aria-hidden="true"></i></a>
+
+                                                <a href=""><i class="fa fa-envelope-o"
+                                                        aria-hidden="true"></i>
+                                                </a>
+                                                <a href=""><i class="fa fa-phone"
+                                                        aria-hidden="true"></i></a>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><img src="image/profile3.jpg" alt=""></td>
+                                            <td>Code BR</td>
+                                            <td>
+                                                <a href=""><i class="fa fa-user"
+                                                        aria-hidden="true"></i></a>
+
+                                                <a href=""><i class="fa fa-envelope-o"
+                                                        aria-hidden="true"></i>
+                                                </a>
+                                                <a href=""><i class="fa fa-phone"
+                                                        aria-hidden="true"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="image/profile1.jpg" alt=""></td>
+                                            <td>Code BR</td>
+                                            <td>
+                                                <a href=""><i class="fa fa-user"
+                                                        aria-hidden="true"></i></a>
+
+                                                <a href=""><i class="fa fa-envelope-o"
+                                                        aria-hidden="true"></i>
+                                                </a>
+                                                <a href=""><i class="fa fa-phone"
+                                                        aria-hidden="true"></i></a>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><img src="image/profile.jpg" alt=""></td>
+                                            <td>Code BR</td>
+                                            <td>
+                                                <a href=""><i class="fa fa-user"
+                                                        aria-hidden="true"></i></a>
+
+                                                <a href=""><i class="fa fa-envelope-o"
+                                                        aria-hidden="true"></i>
+                                                </a>
+                                                <a href=""><i class="fa fa-phone"
+                                                        aria-hidden="true"></i></a>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <span>Code BR 2021</span>
+        </footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+
+        <script src="chart.js"></script>
+
+        <script src="toggle.js"></script>
+    </body>
+
+</html>
